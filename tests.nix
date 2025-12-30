@@ -302,7 +302,7 @@ let
     {
       name = "bin_with_git_dep_in_workspace";
       src = ./sample_projects/bin_with_git_dep_in_workspace;
-      expectedOutput = "v0.1.6";
+      expectedOutput = "0.1.6";
     }
 
     {
@@ -381,6 +381,12 @@ let
         "test read_source_file ... ok"
         "test write_output_file ... ok"
       ];
+    }
+
+    {
+      name = "cross_compile_build_dependencies";
+      src = ./sample_projects/cross_compile_build_dependencies;
+      customBuild = "sample_projects/cross_compile_build_dependencies/default.nix";
     }
 
     #
